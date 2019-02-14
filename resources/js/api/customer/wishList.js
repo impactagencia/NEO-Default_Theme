@@ -194,16 +194,12 @@ function ValidateWishlist(_data, element, userAuthentication) {
 				products.each(function () {
 					let el = $(this).find(".wishlist-btn");
 					el.find(".wishlist-item").removeClass('grey').addClass('red');
-          el.find(".wishlist-item").attr('data-in-list', 'true');
-
-          el.attr("data-tooltip", "Remover da lista de desejos");
+					el.find(".wishlist-item").attr('data-in-list', 'true');
 				});
 			} else {
 				products.each(function () {
 					let el = $(this).find(".bcg-heart.wishlist-btn");
-          el.find(".wishlist-item").removeClass('red').addClass('grey');
-
-          el.attr("data-tooltip", "Adicionar à lista de desejos");
+					el.find(".wishlist-item").removeClass('red').addClass('grey');
 				});
 				_alert("", result.message, "warning");
 			}
@@ -214,15 +210,11 @@ function ValidateWishlist(_data, element, userAuthentication) {
 				products.each(function () {
 					let el = $(this).find(".bcg-heart.wishlist-btn");
 					el.find(".wishlist-item").removeClass('red').addClass('grey');
-          el.find(".wishlist-item").attr('data-in-list', 'false');
-
-          el.attr("data-tooltip", "Adicionar à lista de desejos");
+					el.find(".wishlist-item").attr('data-in-list', 'false');
 				});
 			} else {
 				let el = $(this).find(".bcg-heart.wishlist-btn");
-        el.find(".wishlist-item").removeClass('grey').addClass('red');
-        el.attr("data-tooltip", "Remover da lista de desejos");
-
+				el.find(".wishlist-item").removeClass('grey').addClass('red');
 				_alert("", result.message, "warning");
 			}
 		}
